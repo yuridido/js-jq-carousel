@@ -40,13 +40,18 @@ $(document).ready(function() {
 
     function indietro() {
         var fotoAttiva = $('.images .active');
+        var tondoAttivo = $('.nav .active');
         fotoAttiva.removeClass('active');
-        if (fotoAttiva.hasClass('last')) {
-            $('.images .first').addClass('active');
+        tondoAttivo.removeClass('active');
+        if (fotoAttiva.hasClass('first')) {
+            $('.images .last').addClass('active');
+            $('.nav .last').addClass('active');
         } else {
-            fotoAttiva.next().addClass('active');
+            fotoAttiva.prev().addClass('active');
+            tondoAttivo.prev().addClass('active');
         }
     };
+
 
 
 
