@@ -8,13 +8,14 @@ $(document).ready(function() {
         indietro();
     });
 
+
     $('.nav i').click(function() {
         $('.nav i').removeClass('active');
         $(this).addClass('active');
         var trovato = false;
         var i = 0;
         while (trovato == false) {
-            if ($('.images').eq(i).hasClass('active')){
+            if ($('.nav i').eq(i).hasClass('active')){
                 trovato = true;
             } else {
                 i++;
@@ -22,8 +23,8 @@ $(document).ready(function() {
         }
         trovato = false;
         console.log(i);
-        $('.images .img').removeClass('active');
-        $('.images .img').eq(i).addClass('active');
+        $('.images img').removeClass('active');
+        $('.images img').eq(i).addClass('active');
     });
 
 
